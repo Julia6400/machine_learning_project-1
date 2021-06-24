@@ -1,0 +1,19 @@
+name: bin_clf_project
+channels:
+ - conda-forge
+ - defaults
+ - anaconda
+dependencies:
+ - python == 3.8.5
+ - jupyterlab
+ - ipykernel
+ - nb_conda_kernels
+ - numpy
+ - pandas
+ - seaborn
+ - matplotlib
+ - scikit-learn
+ - imbalanced-learn
+ - hyperopt
+ - joblib
+ - pip

@@ -1,3 +1,8 @@
+# local
+/project_data
+/scientific_aid
+
+# venv
 .idea
 .venv
 
