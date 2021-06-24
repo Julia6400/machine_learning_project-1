@@ -1,3 +1,7 @@
+# local folders
+/project_data
+/scientific_aid
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
