@@ -1,3 +1,4 @@
+<a name="top"></a>
 # Steps 
 A the beggining we specified steps and packages we need to use while completing the task.
 Main task was to **predict labels for the testing data**
@@ -137,7 +138,7 @@ and displaying it in plot:
  
 <a name="Execution"></a> 
 ### Model Execution
-
+At the end we loaded our saved model and saved it to csv file [test_labels.csv](project_data/test_labels.csv)
 
 <a name="problem"></a>
 # Problems
@@ -148,9 +149,13 @@ During programming we came across those problems
 2) Second: Binary classification - [solution](#Second)
 3) Third: unbalanced dataset - [solution](#Third)
 4) Fourth: basic model - [solution](#Fourth)
+5) Fifth: non-exclusive hyperparameters - [solution](#Fifth)
+6) Sixth: model selection - [solution](#Sixth)
+
+Go directly to [Steps](#top)
 
 <a name="First"></a>
-**First** problem we have occured was multidimensional dataset that we loaded from csv files (noticed while calling .info() on data) and the solution we came up with was dimensional reduction by:
+1. **First** problem we have occured was multidimensional dataset that we loaded from csv files (noticed while calling .info() on data) and the solution we came up with was dimensional reduction by:
 - Correlation Heatmap
 - Univariate Selection
 - PCA
@@ -168,14 +173,14 @@ for normalization. Both using Pipeline
     
 
 <a name="Second"></a>
-**Second** problem (while calling .describe() on data) was data (binary) classification and we found solutions by using machine learning models like:
+2. **Second** problem (while calling .describe() on data) was data (binary) classification and we found solutions by using machine learning models like:
 
     sklearn.linear_model.SGDClassifier
     sklearn.linear_model.LogisticRegression
     sklearn.svm.LinearSVC
 
 <a name="Third"></a>
-**Third** problem (while calling .value_count() on data) was that our dataset was unbalanced so the solution was to call:
+3. **Third** problem (while calling .value_count() on data) was that our dataset was unbalanced so the solution was to call:
 - Random Undersampling
 - [Oversampling / SMOTE](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis)
 
@@ -185,10 +190,28 @@ Here we used:
     
 
 <a name="Fourth"></a>
-**Fourth** problem was to chose the basic models so we run:
+4. **Fourth** problem was to chose the basic models so we run:
 
     sklearn.model_selection.GridSearchCV
     hpsklearn.HyperoptEstimator
 
-on various machine learning model to select the best.
+on various machine learning model to select the most promising one
+
+<a name="Fifth"></a>
+5. **Fifth** problem was to gather non-exclusive hyperparameters. Here we decided mostly to use:
+
+    sklearn.model_selection.GridSearchCV
+
+<a name="Sixth"></a>
+6. **Sixth** problem was to call the best model. At first we created basic model to later on find best model with search_space of:
+
+    sklearn.svm.LinearSVC
+    sklearn.neighbors.KNeighborsClassifier
+    sklearn.ensemble.ExtraTreesClassifier
+
+with
+
+    sklearn.model_selection.GridSearchCV
+
+
 
