@@ -1,7 +1,4 @@
-# Report
-
-
-## Steps 
+# Steps 
 A the beggining we specified steps and packages we need to use while completing the task.
 Main task was to **predict labels for the testing data**
 1) [Define the problem](#define)
@@ -13,11 +10,11 @@ Main task was to **predict labels for the testing data**
 7) [Model Execution](#Model-Execution)
 
 <a name="define"></a>
-#### Define the problem
+### Define the problem
 Method we use was [**Binary classification**](https://en.wikipedia.org/wiki/Binary_classification)
 
 <a name="Data-Access"></a>
-#### Data Access
+### Data Access
 We acces the data through [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library
 
     pandas.DataFrame.read_csv()
@@ -30,7 +27,7 @@ and later on to acces about information about DataFrame
     pandas.DataFrame.value_counts()
 
 <a name="Exploratory-Data-Analysis-(EDA)"></a>
-#### Exploratory Data Analysis (EDA) 
+### Exploratory Data Analysis (EDA) 
 Later on we tried to analise the data to learn about it as much as we could using univariate analysis and bivariate analysis crating various [seaborn](https://seaborn.pydata.org/index.html) plots
 
     seaborn.distplot()
@@ -48,7 +45,7 @@ and correlation
     seaborn.heatmap()
 
 <a name="Data-Preprocessing"></a>
-#### Data Preprocessing
+### Data Preprocessing
 At first we splited data to train part and test part using 
 
     sklearn.model_selection.train_test_split
@@ -61,7 +58,7 @@ Than we focused on data standarization and normalization using:
 Trying to understand and set data types, data mixtures, shape, outliers, missing values, noisy data, skewness and kurtosis
 
 <a name="Model-Building"></a>
-#### Model Building
+### Model Building
 We created base line model picking using:
     
     sklearn.model_selection.GridSearchCV
@@ -73,7 +70,7 @@ in Pipeline, and Hyperopt model picking:
 to estimate best model
 
 <a name="Model-Validation"></a> 
-#### Model Validation
+### Model Validation
 To search for the best model with repeated skf we used:
 
     sklearn.neighbors.KNeighborsClassifier
@@ -84,7 +81,7 @@ To search for the best model with repeated skf we used:
 using Pipeline, and showing results in classification report building confusion matrix and ploting it
 
 <a name="Model-Execution"></a> 
-#### Model Execution
+### Model Execution
 At the end we loaded predicted model and executed prediction in a table showing and the types of incorrect predictions made (what classes incorrect predictions were assigned).
 
 - Precision: A measure of a classifiers exactness.
