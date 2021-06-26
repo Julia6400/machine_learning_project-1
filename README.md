@@ -19,6 +19,13 @@ Graduation project for machine learning classes
 - every task is a new branch with code review before merge
 - Integraton with: https://neptune.ai/
 
+## Data 
+
+All data are in directory
+```sh
+project_data
+```
+they are not included in git because of the large memory usage data can be downloaded [here](https://drive.google.com/drive/folders/1We8Z_pjXJmnrtrPrAkHMU9V1hL3wFCKu?usp=sharing)
 
 ## Installation
 
