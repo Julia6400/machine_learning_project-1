@@ -1,7 +1,3 @@
-/scientific_aid
-/project_data
-.venv
-.idea
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
