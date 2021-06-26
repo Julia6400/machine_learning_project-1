@@ -3,6 +3,7 @@ channels:
  - conda-forge
  - defaults
  - anaconda
+ - creditx
 dependencies:
  - python == 3.8.5
  - jupyterlab
@@ -17,3 +18,7 @@ dependencies:
  - hyperopt
  - joblib
  - pip
+ - hpsklearn
+ - neptune-client
+ - neptune-optuna
+ - future == 0.13.1
