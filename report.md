@@ -47,6 +47,13 @@ and correlation
 
     seaborn.heatmap()
 
+
+Conclusions:
+    
+    binary classification - relevant models
+    multidimensional dataset - pca reduction
+    unbalanced data set - oversampling
+
 <a name="Preprocessing"></a>
 ### Data Preprocessing
 At first we splited data to train part and test part using 
